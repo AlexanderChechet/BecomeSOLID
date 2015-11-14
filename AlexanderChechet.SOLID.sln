@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BecomeSolid.Day1.Refactor",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BecomeSolid.Day2", "BecomeSolid.Day2\BecomeSolid.Day2.csproj", "{8BA90CFE-3E6A-47AC-99FC-E57AD7EA2E44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BecomeSolid.Day2.Refactor", "BecomeSolid.Day2.Refactor\BecomeSolid.Day2.Refactor.csproj", "{9EC965BF-AD58-4811-9D4A-F53DD4915798}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{8BA90CFE-3E6A-47AC-99FC-E57AD7EA2E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BA90CFE-3E6A-47AC-99FC-E57AD7EA2E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BA90CFE-3E6A-47AC-99FC-E57AD7EA2E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC965BF-AD58-4811-9D4A-F53DD4915798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC965BF-AD58-4811-9D4A-F53DD4915798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC965BF-AD58-4811-9D4A-F53DD4915798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC965BF-AD58-4811-9D4A-F53DD4915798}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
