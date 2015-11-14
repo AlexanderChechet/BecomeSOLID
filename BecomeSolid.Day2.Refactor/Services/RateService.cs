@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BecomeSolid.Day2.Refactor.Services
 {
-    public class RateService
+    public class RateService : IRateService
     {
         private ILogger logger;
         private string address = "https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22{0}%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";

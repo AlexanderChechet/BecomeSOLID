@@ -1,4 +1,5 @@
-﻿using BecomeSolid.Day2.Refactor.Services;
+﻿using BecomeSolid.Day2.Refactor.Builders;
+using BecomeSolid.Day2.Refactor.Services;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -14,14 +15,9 @@ namespace BecomeSolid.Day2.Refactor
         {
             ILogger logger = LogManager.GetLogger("RateLogger");
 
-            var service = new RateService(logger);
-            var rate = service.GetRate("USDRUB,RUBUSD");
-            Console.WriteLine(rate.Date.ToShortDateString());
             
-            foreach(var item in rate.Rates)
-            {
-                Console.WriteLine(item);
-            }
+
+            Console.WriteLine(message);
             Console.ReadLine();
         }
     }
