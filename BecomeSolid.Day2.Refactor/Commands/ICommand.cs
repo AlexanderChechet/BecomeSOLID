@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BecomeSolid.Day2.Refactor.Commands
 {
-    public interface ICommand<T> where T : CommandContext
+    public interface ICommand
     {
-        void Execute(T context);
+        void Execute(CommandContext context);
     }
 }

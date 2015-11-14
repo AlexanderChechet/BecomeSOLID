@@ -10,7 +10,7 @@ using Telegram.Bot.Types;
 
 namespace BecomeSolid.Day2.Refactor.Commands
 {
-    public class RateCommand : ICommand<RateContext>
+    public class RateCommand : ICommand
     {
         private ILogger logger;
         private IRateService rateService;
@@ -21,9 +21,10 @@ namespace BecomeSolid.Day2.Refactor.Commands
             this.rateService = rateService;
         }
 
-        public async void Execute(RateContext context)
+        public async void Execute(CommandContext context)
         {
-            var rates = GetRatesFromMessage(context.Update.Message.Text);
+            var rateContext = context as RateContext;
+            var rates = GetRatesFromMessage(rateContext.Update.Message.Text);
             var rate = rateService.GetRate(rates);
 
             var message = (new RateBuilder())
@@ -31,7 +32,7 @@ namespace BecomeSolid.Day2.Refactor.Commands
                 .WithRates(rate.Rates)
                 .Build();
 
-            await context.Bot.SendTextMessage(context.Update.Message.Chat.Id, message);
+            await rateContext.Bot.SendTextMessage(rateContext.Update.Message.Chat.Id, message);
 
             logger.Info(string.Format("Echo Message: {0}", message));
         }
